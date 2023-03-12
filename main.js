@@ -3,13 +3,13 @@ song1=loadSound("music.mp3");
 song2=loadSound("music2.mp3");
 }
 function setup(){
-canvas=createCanvas(700,450);
+canvas=createCanvas(0,0,700,450);
 canvas.center();
 video=createCapture(VIDEO);
-video.hide();
+video.size(700,450);
 console.log("cocolachocolate");
 poseNet=ml5.poseNet(video,modelLoaded);
-//poseNet.on('pose',gotPoses)
+poseNet.on('pose',gotPoses)
 }
 function draw(){
 background("black");
